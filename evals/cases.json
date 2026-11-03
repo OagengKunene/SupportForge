@@ -1,0 +1,14 @@
+[
+  {"question":"Both duplicate card payments have settled against the invoice", "document":"billing.md", "category":"billing"},
+  {"question":"Where can I download my invoice PDF?", "document":"billing.md", "category":"billing"},
+  {"question":"Can I request a refund within 14 days?", "document":"refunds.md", "category":"billing"},
+  {"question":"How do I cancel subscription renewal?", "document":"refunds.md", "category":"general"},
+  {"question":"My password reset link expired", "document":"account.md", "category":"account"},
+  {"question":"I lost my two-factor authentication recovery codes for my account", "document":"account.md", "category":"account"},
+  {"question":"Our API returns HTTP 429 rate limits", "document":"api.md", "category":"technical"},
+  {"question":"An API timeout happened during a write operation", "document":"api.md", "category":"technical"},
+  {"question":"My account was hacked and credentials stolen", "document":"security.md", "category":"security"},
+  {"question":"Production outage affecting multiple users", "document":"security.md", "category":"technical"},
+  {"question":"Quantum teleportation advice", "document":null, "category":"general"},
+  {"question":"How do I cultivate extraterrestrial orchids?", "document":null, "category":"general"}
+]

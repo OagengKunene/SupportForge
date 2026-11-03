@@ -1,0 +1,26 @@
+services:
+  app:
+    build: .
+    ports:
+      - "127.0.0.1:${SUPPORTFORGE_PORT:-8000}:8000"
+    environment:
+      SUPPORTFORGE_MODE: ${SUPPORTFORGE_MODE:-demo}
+      SUPPORTFORGE_DATABASE: /app/data/supportforge.sqlite3
+      SUPPORTFORGE_API_TOKEN: ${SUPPORTFORGE_API_TOKEN:-}
+      SUPPORTFORGE_MODEL_TIMEOUT: ${SUPPORTFORGE_MODEL_TIMEOUT:-45}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+    volumes:
+      - supportforge-data:/app/data
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    stop_grace_period: 15s
+
+volumes:
+  supportforge-data:
